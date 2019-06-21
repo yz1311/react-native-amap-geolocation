@@ -19,6 +19,7 @@ RCT_REMAP_METHOD(init, initWithKey
   [AMapServices sharedServices].apiKey = key;
   if (!_manager) {
     _manager = [AMapLocationManager new];
+    _manager.locatingWithReGeocode = YES;
     _manager.delegate = self;
   }
   resolve(nil);
